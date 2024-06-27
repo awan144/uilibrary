@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../style.css" />
+    <style>
+      .timeout-bar {
+        animation: decreaseWidth 3s linear;
+      }
+
+      @keyframes decreaseWidth {
+        from {
+          width: 50%;
+        }
+
+        to {
+          width: 0%;
+        }
+      }
+    </style>
   </head>
 
   <body class="bg-slate-900 text-white">
@@ -57,6 +72,41 @@
       <main class="container mx-auto h-dvh overflow-y-scroll px-5">
         <h2 class="text-2xl font-semibold text-white">Simple Alerts</h2>
         <section class="my-2 *:my-5 *:rounded-md *:border *:py-3 *:pl-4 *:pr-6">
+          <div
+            class="flex items-center gap-1.5 border-gray-50 bg-gray-600 text-gray-50"
+          >
+            A simple light alert—check it out!
+            <div class="grow"></div>
+            <!-- <div> -->
+            <button
+              class="font-semibold text-cyan-600 underline underline-offset-2"
+            >
+              action 1
+            </button>
+            <button class="underline-offset-2 hover:underline">action 2</button>
+            <!-- </div> -->
+          </div>
+          <div class="border-slate-300 bg-slate-900 text-slate-300">
+            A simple dark alert—check it out!
+          </div>
+          <div class="border-white bg-black text-white">
+            A simple contrast alert—check it out!
+          </div>
+          <div class="border-cyan-50 bg-cyan-600 text-cyan-50">
+            A simple info alert—check it out!
+          </div>
+          <div class="border-yellow-50 bg-yellow-600 text-yellow-50">
+            A simple warning alert—check it out!
+          </div>
+          <div class="border-green-50 bg-green-600 text-green-50">
+            A simple success alert—check it out!
+          </div>
+          <div class="border-rose-50 bg-rose-600 text-rose-50">
+            A simple error alert—check it out!
+          </div>
+        </section>
+        <h2 class="text-2xl font-semibold text-white">Simple Alerts</h2>
+        <section class="my-2 *:my-5 *:rounded-md *:border *:py-3 *:pl-4 *:pr-6">
           <div class="border-gray-50 bg-gray-600 text-gray-50">
             A simple light alert—check it out!
           </div>
@@ -104,7 +154,6 @@
             A simple error alert—check it out!
           </div>
         </section>
-
         <h2 class="text-2xl font-semibold text-white">Simple Icon Alerts</h2>
         <section class="my-2 *:my-5 *:rounded-md *:border *:py-3 *:pl-4 *:pr-6">
           <div class="border-cyan-50 bg-cyan-600 text-cyan-50">
@@ -228,7 +277,9 @@
         <h2 class="text-2xl font-semibold text-white">
           Simple Alerts Close Button
         </h2>
-        <section class="my-2 *:my-5 *:rounded-md *:border *:px-4 *:py-3">
+        <section
+          class="my-2 *:my-5 *:flex *:justify-between *:rounded-md *:border *:py-3 *:pl-4 *:pr-6"
+        >
           <div class="border-cyan-50 bg-cyan-600 text-cyan-50">
             A simple info alert—check it out!
             <svg
@@ -237,7 +288,7 @@
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              class="float-right ml-1 cursor-pointer rounded-md bg-cyan-50 fill-cyan-600"
+              class="cursor-pointer rounded-md bg-cyan-50 fill-cyan-600"
             >
               <path
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
@@ -252,7 +303,7 @@
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              class="float-right ml-1 cursor-pointer rounded-md bg-yellow-50 fill-yellow-600"
+              class="cursor-pointer rounded-md bg-yellow-50 fill-yellow-600"
             >
               <path
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
@@ -267,7 +318,7 @@
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              class="float-right ml-1 cursor-pointer rounded-md bg-green-50 fill-green-600"
+              class="cursor-pointer rounded-md bg-green-50 fill-green-600"
             >
               <path
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
@@ -282,7 +333,7 @@
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              class="float-right ml-1 cursor-pointer rounded-md bg-rose-50 fill-rose-600"
+              class="cursor-pointer rounded-md bg-rose-50 fill-rose-600"
             >
               <path
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
@@ -306,6 +357,7 @@
                 d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
               />
             </svg>
+            <!-- <div class="grow"></div> -->
             <svg
               onclick="this.parentElement.remove()"
               xmlns="http://www.w3.org/2000/svg"
@@ -318,6 +370,7 @@
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
               />
             </svg>
+            A simple info alert—check it out! A simple info alert—check it out!
             A simple info alert—check it out!
           </div>
           <div class="border-yellow-50 bg-yellow-600 text-yellow-50">
@@ -332,6 +385,7 @@
                 d="m40-120 440-760 440 760H40Zm138-80h604L480-720 178-200Zm302-40q17 0 28.5-11.5T520-280q0-17-11.5-28.5T480-320q-17 0-28.5 11.5T440-280q0 17 11.5 28.5T480-240Zm-40-120h80v-200h-80v200Zm40-50Z"
               />
             </svg>
+            <!-- <div class="grow"></div> -->
             <svg
               onclick="this.parentElement.remove()"
               xmlns="http://www.w3.org/2000/svg"
@@ -358,6 +412,7 @@
                 d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
               />
             </svg>
+            <!-- <div class="grow"></div> -->
             <svg
               onclick="this.parentElement.remove()"
               xmlns="http://www.w3.org/2000/svg"
@@ -384,6 +439,7 @@
                 d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q54 0 104-17.5t92-50.5L228-676q-33 42-50.5 92T160-480q0 134 93 227t227 93Zm252-124q33-42 50.5-92T800-480q0-134-93-227t-227-93q-54 0-104 17.5T284-732l448 448Z"
               />
             </svg>
+            <!-- <div class="grow"></div> -->
             <!-- onload="setTimeout(() => this.parentElement.remove(), 4000)" -->
             <svg
               onclick="this.parentElement.remove()"
@@ -515,105 +571,96 @@
           </div>
         </section>
         <h2 class="text-2xl font-semibold text-white">Simple Icon Alerts</h2>
-        <section class="my-2 *:my-5 *:gap-x-2 *:border-y *:px-4 *:py-3">
-          <div class="border-cyan-50 bg-cyan-600 text-cyan-50">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              class="float-left mr-1 fill-cyan-50"
-            >
-              <path
-                d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
-              />
-            </svg>
-            <div class="grow"></div>
-            <svg
-              onclick="this.parentElement.remove()"
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              class="float-right ml-1 cursor-pointer rounded-md bg-cyan-50 fill-cyan-600"
-            >
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              />
-            </svg>
-            A simple info alert—check it out!
-          </div>
-        </section>
-        <h2 class="text-2xl font-semibold text-white">Link Alerts</h2>
         <section
-          class="my-2 *:my-5 *:rounded-md *:border *:border-dashed *:px-4 *:py-3"
+          class="my-2 *:my-5 *:flex *:items-center *:gap-x-2 *:rounded-md *:border *:border-dashed *:py-3 *:pl-4 *:pr-6"
         >
           <a
             href=""
-            class="block border-cyan-600 bg-cyan-50 text-cyan-600 transition hover:border-solid hover:shadow hover:shadow-cyan-600"
+            class="relative border-rose-600 bg-rose-50 text-rose-600 transition hover:border-solid hover:shadow hover:shadow-rose-600"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              class="float-left mr-1 fill-cyan-600"
+              class="fill-rose-600"
             >
               <path
                 d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q54 0 104-17.5t92-50.5L228-676q-33 42-50.5 92T160-480q0 134 93 227t227 93Zm252-124q33-42 50.5-92T800-480q0-134-93-227t-227-93q-54 0-104 17.5T284-732l448 448Z"
               />
             </svg>
+            A simple error alert—check it out!
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              class="float-right ml-1 fill-cyan-600"
+              class="absolute right-2 top-2 fill-rose-600"
             >
               <path
                 d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
               />
             </svg>
-            A simple error alert—check it out!
           </a>
         </section>
-
-        <section
-          class="my-2 *:my-5 *:rounded-md *:border *:border-dashed *:px-4 *:py-3"
-        >
-          <div
-            class="flex items-center gap-1.5 border-gray-50 bg-gray-600 text-gray-50"
-          >
-            A simple light alert—check it out!
-            <div class="grow"></div>
-
+        <h2 class="text-2xl font-semibold text-white">Target Alerts</h2>
+        <section class="my-2">
+          <div>
             <button
-              class="font-semibold text-cyan-600 underline underline-offset-2"
+              class="rounded border px-5 py-2"
+              onclick="triggerSimpleAlert(this)"
             >
-              action 1
-            </button>
-            <button class="underline-offset-2 hover:underline">action 2</button>
-          </div>
-          <div
-            class="flex items-center gap-1.5 border-gray-50 bg-gray-600 text-gray-50"
-          >
-            A simple light alert—check it out!
-            <div class="grow"></div>
-
-            <button
-              class="rounded bg-slate-900 px-1.5 py-0.5 font-semibold text-cyan-600"
-            >
-              action 1
+              Trigger Simple
             </button>
             <button
-              class="rounded px-1.5 py-0.5 font-semibold hover:bg-slate-900 hover:text-cyan-600"
+              class="rounded border px-5 py-2"
+              onclick="triggerTimeoutAlert(this)"
             >
-              action 2
+              Trigger Progress
             </button>
           </div>
+          <!-- <div
+            class="absolute left-2 top-2 rounded border border-green-50 bg-green-600 p-4 text-green-50"
+          >
+            A simple info alert—check it out!
+          </div> -->
         </section>
       </main>
     </div>
     <footer></footer>
+
+    <script>
+      function triggerSimpleAlert(btn) {
+        const pDiv = btn.parentElement;
+
+        // Create a container div
+        const alertDiv = document.createElement("div");
+        alertDiv.className =
+          "p-4 rounded border border-green-50 bg-green-600 text-green-50";
+        alertDiv.innerHTML = `        
+          A simple info alert—check it out!
+        `;
+
+        // Append the alert div to the body
+        pDiv.appendChild(alertDiv);
+        setTimeout(() => alertDiv.remove(), 3000);
+      }
+      function triggerTimeoutAlert(btn) {
+        const pDiv = btn.parentElement;
+
+        // Create a container div
+        const alertDiv = document.createElement("div");
+        alertDiv.className =
+          "rounded border border-green-50 bg-green-600 text-green-50";
+        alertDiv.innerHTML = `        
+          <div class="p-3">A simple info alert—check it out!</div>
+          <div class="timeout-bar h-1 w-0 rounded bg-green-400"></div>                              
+        `;
+
+        // Append the alert div to the body
+        pDiv.appendChild(alertDiv);
+        setTimeout(() => alertDiv.remove(), 3000);
+      }
+    </script>
   </body>
 </html>
